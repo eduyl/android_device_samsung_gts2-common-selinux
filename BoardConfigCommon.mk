@@ -70,13 +70,8 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/samsung/universal5433
 BOARD_KERNEL_IMAGE_NAME := zImage
 TARGET_LINUX_KERNEL_VERSION := 3.10
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_CLANG_COMPILE := false
-
-# Kernel - Toolchain
-ifneq ($(wildcard $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-7.2/bin),)
-    KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-7.2/bin
-    KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-endif
 
 # Ant+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
