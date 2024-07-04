@@ -203,6 +203,7 @@ BOARD_USE_SINGLE_PLANE_IN_DRM := false
 
 # Power
 TARGET_POWERHAL_VARIANT := samsung
+TARGET_DT2W_PATH := /sys/class/sec/tsp/input/rmii2c/wake_gesture
 
 # Properties
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop

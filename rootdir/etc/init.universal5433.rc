@@ -412,6 +412,7 @@ on late-fs
 # Permissions for TouchScreen
     chown system radio /sys/class/sec/tsp/cmd
     chown system system /sys/class/sec/tsp/input/enabled
+    chown system system /sys/class/sec/tsp/input/rmii2c/wake_gesture
 
 # Permissions for Touchkey
     chown system radio /sys/class/sec/sec_touchkey/touchkey_firm_update
