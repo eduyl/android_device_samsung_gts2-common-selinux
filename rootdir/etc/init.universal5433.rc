@@ -412,8 +412,14 @@ on late-fs
 # Permissions for TouchScreen
     chown system radio /sys/class/sec/tsp/cmd
     chown system system /sys/class/sec/tsp/input/enabled
-    chown system system /sys/class/sec/tsp/input/rmii2c/wake_gesture
 
+# Permissions for DT2W
+on boot
+    chown system system /sys/class/sec/tsp/input/rmii2c/wake_gesture
+    chmod 0660 /sys/class/sec/tsp/input/rmii2c/wake_gesture
+on property:sys.boot_completed=1
+    write /sys/class/sec/tsp/input/rmii2c/wake_gesture 1    
+    
 # Permissions for Touchkey
     chown system radio /sys/class/sec/sec_touchkey/touchkey_firm_update
     chown system system /sys/class/sec/sec_touchkey/input/enabled
